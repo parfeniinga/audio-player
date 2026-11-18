@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self' blob:; connect-src 'self'; form-action 'none'; base-uri 'none'">
+    <meta name="referrer" content="no-referrer">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Playlisturile mele - MP3 Player</title>
+</head>
+<body data-pagina="playlisturi">
+    <div class="wrap">
+        <header>
+            <h1>Playlisturile mele</h1>
+            <p class="sub">Playlisturile se salvează în browserul tău.</p>
+            <nav class="nav">
+                <a class="btn" href="index.html">Colecția</a>
+                <a class="btn" href="lista.html">Pe genuri</a>
+                <a class="btn" href="playlisturi.html">Playlisturi</a>
+            </nav>
+            <div class="bar"></div>
+        </header>
+
+        <section class="card">
+            <h2>Creează un playlist</h2>
+            <form id="formPlaylist" autocomplete="off">
+                <label for="nume_playlist">Denumirea playlistului</label>
+                <input type="text" id="nume_playlist" maxlength="100" required placeholder="Ex.: Melodiile mele preferate">
+                <label>Alege melodiile</label>
+                <div id="alegeNoi" class="alege"></div>
+                <button class="btn" type="submit">Creează playlistul</button>
+            </form>
+        </section>
+
+        <h2 class="jos">Playlisturile salvate</h2>
+        <div id="playlisturi"></div>
+
+        <footer>MP3 Player · Player audio online</footer>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
